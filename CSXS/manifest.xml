@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.adobe.CEPHTMLTEST" ExtensionBundleVersion="1.0" Version="6.0"> <!-- MAJOR-VERSION-UPDATE-MARKER -->
+  <ExtensionList>
+    <Extension Id="com.example.helloworld.extension" Version="1.0">
+        <HostList>
+            <Host Name="PHXS" Port="8888"/>
+        </HostList>
+    </Extension>
+  </ExtensionList>
+  <ExecutionEnvironment>
+      <HostList>
+          <Host Name="PHXS" Version="16.0"/>
+      </HostList>
+      <LocaleList>
+          <Locale Code="All"/>
+      </LocaleList>
+      <RequiredRuntimeList>
+          <RequiredRuntime Name="CSXS" Version="6.0"/> <!-- MAJOR-VERSION-UPDATE-MARKER -->
+      </RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="com.example.helloworld.extension">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./html/index.html</MainPath>
+        </Resources>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>PIGMENT</Menu>
+          <Geometry>
+            <Size>
+              <Height>400</Height>
+              <Width>400</Width>
+            </Size>
+          </Geometry>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+
+  <CEFCommandLine>
+      <Parameter>--nodejs-disabled</Parameter>
+  </CEFCommandLine>
+</ExtensionManifest>
