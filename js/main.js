@@ -3,9 +3,23 @@ window.addEventListener("message", receiveMessage, false);
 
 function receiveMessage(event){
   var source = event.source.frameElement; //this is the iframe that sent the message
-  var message = event.data; //this is the message
-  console.log("recvd msg" + message);
-  //do something with message
+  var data = event.data; //this is the message
+  console.log("recvd msg" + data);
+  if(data == "c"){
+      hue("decrease");
+  }else if (data == "C") {
+      hue("increase");
+  }
+  else if (data == "s") {
+      saturation("decrease");
+  }else if (data == "S") {
+      saturation("increase");
+  }
+  else if (data == "v") {
+      brightness("decrease");
+  }else if (data == "V") {
+      brightness("increase");
+  }
 }
 
 
